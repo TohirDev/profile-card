@@ -7,6 +7,11 @@ body {
   display: grid;
   place-items: center;
   height: 100vh;
+  position: relative;
+}
+html {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .bottom-image {
@@ -93,4 +98,29 @@ body {
   font-size: 14px;
   opacity: 0.5;
   letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .bottom-image {
+    position: absolute;
+    bottom: -35rem;
+    right: -30rem;
+  }
+
+  .top-image {
+    position: absolute;
+    top: -40rem;
+    left: -20rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .card {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .card {
+    width: 200px;
+  }
 }
